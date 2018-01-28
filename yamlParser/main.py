@@ -1,6 +1,6 @@
 from yamlParser import YamlSectionParser
 
-def getYamlContents():
+def getYamlContents( pathToYamlFile ):
     """
     Args:
         param1 (str): Path of input yaml file
@@ -9,7 +9,7 @@ def getYamlContents():
         dict: yaml file contents
     """
 
-    with open("config.yaml","r")as stream:
+    with open( pathToYamlFile,"r")as stream:
         try:
             import yaml
             return yaml.load(stream)
@@ -18,5 +18,5 @@ def getYamlContents():
 
 # Main............
 yamlSectionExtractor = YamlSectionParser()
-sampleYamlFileContents = getYamlContents()
+sampleYamlFileContents = getYamlContents( "config.yaml" )
 print( yamlSectionExtractor.getYamlSection( sampleYamlFileContents, [ "section1.s1arr1item1", "section1.s1common", "section2.s2key1", "section2.s2key2.commonKey"] ))
