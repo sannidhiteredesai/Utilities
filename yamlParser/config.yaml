@@ -1,0 +1,22 @@
+section1:
+ - - s1arr1item1: a1i1
+   - s1arr1item2: a1i2
+   - s1common: common1
+ - - s1arr2item1: a2i1
+   - s1arr2item2: a2i2
+   - s1common: common2
+
+section2:
+  - s2key1:
+     data1: data1
+     data2: data2
+  - s2key2:
+    - commonKey:
+       field1: 11
+       field2: 12
+    - commonKey:
+       field1: 21
+       field2: 22
+    - commonKey:
+       field1: 31
+       field2: 33
